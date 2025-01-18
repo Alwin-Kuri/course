@@ -169,7 +169,7 @@ function validatePurchaseForm() {
     // Validate year (e.g., >= current year)
     const currentYear = new Date().getFullYear();
     const yearInt = parseInt(year, 10);
-    if (isNaN(yearInt) || yearInt < currentYear) {
+    if (isNaN(yearInt) || yearInt > currentYear) {
         alert("Please enter a valid year.");
         return false;
     }
